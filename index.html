@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AI Invoice Generator - Create Professional Invoices in Seconds</title>
+    <meta name="description" content="Generate professional invoices quickly and easily with our AI-powered invoice generator. Save time and streamline your billing process.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .trust-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        /* Hero Section */
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .hero h1 .highlight {
+            color: #2563eb;
+        }
+        
+        .hero .subheadline {
+            font-size: 20px;
+            color: #4b5563;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        
+        /* Offer Box */
+        .offer-box {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+        
+        .offer-box .offer-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .offer-box .offer-subtext {
+            font-size: 16px;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 18px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        }
+        
+        .trust-line {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 48px;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 24px;
+            margin-bottom: 48px;
+            border-radius: 8px;
+        }
+        
+        .problem-section h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #92400e;
+        }
+        
+        .problem-section p {
+            color: #78350f;
+            font-size: 16px;
+        }
+        
+        /* Features Section */
+        .features {
+            margin-bottom: 48px;
+        }
+        
+        .features h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: #f3f4f6;
+            transform: translateX(4px);
+        }
+        
+        .feature-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .feature-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #111;
+        }
+        
+        .feature-content p {
+            color: #4b5563;
+            font-size: 15px;
+        }
+        
+        /* Why Section */
+        .why-section {
+            background: #eff6ff;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 48px;
+        }
+        
+        .why-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1e40af;
+        }
+        
+        .why-section p {
+            color: #1e3a8a;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Urgency */
+        .urgency {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 24px;
+            background: #fef2f2;
+            border-radius: 8px;
+        }
+        
+        .urgency p {
+            font-size: 18px;
+            color: #991b1b;
+            font-weight: 600;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 48px 0;
+        }
+        
+        .final-cta h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            .offer-box .offer-text {
+                font-size: 24px;
+            }
+            
+            .cta-button {
+                font-size: 16px;
+                padding: 16px 24px;
+            }
+            
+            .features h2 {
+                font-size: 24px;
+            }
+            
+            .final-cta h2 {
+                font-size: 26px;
+            }
+            
+            .container {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="trust-badge">✓ Instant Download</div>
+            <div class="hero">
+                <h1>Create Professional Invoices in <span class="highlight">Under 60 Seconds</span></h1>
+                <p class="subheadline">No accounts. No subscriptions. No setups. Just download, open, and start invoicing—with AI-powered discounts built in.</p>
+            </div>
+
+            <div class="value-box">
+                <div class="value-text">One-Time Purchase. Lifetime Access.</div>
+                <div class="value-subtext"> Pay once and use forever—no hidden fees or recurring charges.</div>
+            </div>
+            <a href="https://elleithy.gumroad.com/l/zqdzrv?wanted=true" class="cta-button">
+            Get Instant Access
+            </a>
+            <p class="trust-line"> Instant delivery • Secure checkout • No subscription required</p>
+            <div class="problem-section">
+                <h2>Still Manually Creating Invoices?</h2>
+                <p>Every hour spent on invoice formatting is an hour not spent growing your business. While you're wrestling with spreadsheets, your competitors are already moving faster.</p>
+            </div>
+            <div class="features">
+                 <h2>Everything You Need, Nothing You Don't</h2>
+                 <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                <div class="feature-content">
+                    <h3>AI-Powered Smart Discounts</h3>
+                    <p>Automatically apply intelligent discounts for larger orders when you want to reward customers.</p>
+                </div>
+                 <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-content">
+                    <h3>Error-Free Input</h3>
+                    <p>Simply enter items, quantities, and prices with complete confidence—no formatting headaches.</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📄</div>
+                <div class="feature-content">
+                    <h3>Automatic PDF Generation</h3>
+                    <p>Generate clean, professional PDF invoices ready to send to clients in seconds.</p>
+                </div>
+            </div>
+        </div>
+        <div class="comparison">
+            <h2>This vs. Traditional Invoicing Tools</h2>
+            <div class="comparison-grid">
+                <div class="comparison-item bad">
+                    <div class="comparison-label">Other Tools</div>
+                    <div class="comparison-text">
+                        • Monthly subscriptions<br>
+                        • Account setup required<br>
+                        • Complex dashboards<br>
+                        • Internet required<br>
+                        • Ongoing costs
+                </div>
+                </div>
+                 <div class="comparison-item good">
+                    <div class="comparison-label">This Tool</div>
+                    <div class="comparison-text">
+                        • One-time payment<br>
+                        • Instant download<br>
+                        • Simple & fast<br>
+                        • Works offline<br>
+                        • Pay once, own forever
+                 </div>
+                </div>
+            </div>
+        </div>
+        <div class="urgency">
+            <p>⏰ Stop losing time to manual invoicing. Get started today.</p>
+        </div>
+        <div class="final-cta">
+            <h2> Start creating professional invoices in seconds.</h2>
+            <a href="https://elleithy.gumroad.com/l/zqdzrv?wanted=true" class="cta-button">
+            Get Instant Access
+            </a>
+        </div>
+    </div>
+    </body>
+</html>
